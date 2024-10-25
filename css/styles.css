@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital@0;1&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 80vw;
+  height: 90vh;
+  margin: 5% auto;
+  border: 1px solid #000;
+  font-family: "Playwrite GB S", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  box-shadow: 5px 5px 5px #000;
+  /* position: relative; */
+  /* overflow: hidden; */
+}
+
+.todoForm {
+  border: 1px solid #000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  /* left: 50%; */
+  /* top: 50%; */
+  /* transform: translate(-50% -50%); */
+  position: relative;
+}
+
+.addBtn {
+  position: absolute;
+  left: 80%;
+  top: 10%;
+  transform: translate(-50% -50%);
+  font-size: 1.5rem;
+  padding: 5px;
+  transition: all 0.5s ease-in-out;
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 20px;
+  animation: pulse 10s linear infinite;
+}
+
+.addBtn:hover {
+  background-color: #d9afd9;
+  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+  border-radius: 20px;
+}
+
+.todolist {
+  /* border: 1px solid #f00; */
+  height: fit-content;
+  width: 100%;
+  top: 60%;
+  position: absolute;
+  list-style-type: none;
+  display: block;
+  margin-top: 1%;
+}
+
+.todolist li {
+  text-decoration: underline;
+  margin: 1%;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.todolist li:hover {
+  transform: translateX(5px);
+  color: #abdcff;
+}
+
+.todolist button {
+  color: #abdcff;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #0396ff;
+  display: block;
+  margin-left: 3%;
+  left: 50%;
+  top: -5px;
+  position: absolute;
+}
+
+.todoForm h2 {
+  position: absolute;
+  left: 20%;
+  top: 0%;
+  text-align: center;
+  margin: 5%;
+  font-size: 2.5rem;
+  padding: 10px;
+}
+
+.todoforms {
+  position: absolute;
+  width: 80%;
+  flex: 1;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50% -50%);
+  height: 50px;
+  /* padding: 20px; */
+  /* border: 1px solid #000; */
+}
+
+.todoforms .inputEle {
+  /* border: 1px solid #f00; */
+  height: 80%;
+  width: 50%;
+  left: 25%;
+  top: 10%;
+  transform: translateX(-50%);
+  margin: auto;
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 3px 3px #abdcff, -3px -3px #0396ff;
+  padding: 1px;
+  animation: pulse 10s linear infinite;
+}
+
+.todoforms .inputEle::placeholder {
+  text-align: center;
+  font-size: 1.2rem;
+  transform: scale(1);
+}
+
+.weather {
+  flex: 0 0 100%;
+  position: absolute;
+  /* border: 1px solid #000; */
+  width: 50%;
+  height: 100px;
+  padding: 10px;
+  left: 25%;
+  top: 25%;
+  transform: translate(-50% -50%);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    color: #000;
+  }
+  50% {
+    transform: scale(1.05);
+    color: #ddd;
+  }
+  100% {
+    transform: scale(1);
+    color: #000;
+  }
+}
